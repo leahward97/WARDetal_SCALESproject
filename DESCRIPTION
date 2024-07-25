@@ -3,5 +3,5 @@ Version: 0.1
 License: 
 Description: For use with the SCALES dataset
 Title: Functions for the Ward et al. analysis of the SCALES dataset
-Author: Leah Ward
-Maintainer: Leah Ward
+Author: "Leah Ward"
+Maintainer: "Leah Ward"
