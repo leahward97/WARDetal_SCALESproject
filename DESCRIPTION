@@ -1,6 +1,6 @@
 Package: SCALESfunctions
 Version: 0.1
-License: 
+License: GPL-3
 Description: For use with the SCALES dataset
 Title: Functions for the Ward et al. analysis of the SCALES dataset
 Author: "Leah Ward"
