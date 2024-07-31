@@ -12,9 +12,10 @@ descriptivetable <- function(TDdata, DLDdata){
   income_sd <- c(round(sd(TDdata$idaci_quintilet1),2), round(sd(DLDdata$idaci_quintilet1),2))
   income <- str_glue("{income_mean} ({income_sd})")
   SummaryTable <- tibble("Does child meet criteria of DLD?" = c("no", "yes"), "n" = c(nrow(TDdata), nrow(DLDdata)),
-                         "Male" = c(sum(TDdata$q5gender == 1), sum(DLDdata$q5gender == 1)), "Female" = c(sum(TDdata$q5gender == 0), sum(DLDdata$q5gender == 0)),
-                         "Age in months" = age, "White ethnic origin" = c(sum(TDdata$ethnicity == 1), sum(DLDdata$ethnicity == 1)),
-                         "Other ethnic origin" = c(sum(TDdata$ethnicity == 2), sum(DLDdata$ethnicity == 2)),
+                         "Male" = c(sum(TDdata$q5gender == "Male"), sum(DLDdata$q5gender == "Male")), 
+                         "Female" = c(sum(TDdata$q5gender == "Female"), sum(DLDdata$q5gender == "Female")),
+                         "Age in months" = age, "White ethnic origin" = c(sum(TDdata$ethnicity == "White"), sum(DLDdata$ethnicity == "White")),
+                         "Other ethnic origin" = c(sum(TDdata$ethnicity == "Other"), sum(DLDdata$ethnicity == "Other")),
                          "IDACI" = income)
   nice_table(SummaryTable)
 }
